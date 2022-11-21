@@ -1,6 +1,5 @@
 package ar.steps;
 
-import ar.validator.ProjectValidator;
 import ar.validator.TpUtils;
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.And;
@@ -17,12 +16,6 @@ public class Common_Steps_Utils extends PageSteps {
         BaseService.AddParams("api_key", Api_Info.API_KEY);
     }
 
-    @Given("Cuenta creada en clockify y X-Api-Key Invalida")
-    public void set_XApiKey_Invalida() {
-        BaseService.AddParams("base.url", Api_Info.BASE_URL);
-        BaseService.AddParams("api_key", Api_Info.API_INVALID_KEY);
-    }
-
     @And("ingreso un workspace-id Valido")
     public void inputWorkspaceIdValido() {
         BaseService.AddParams("workspace_id", Api_Info.WORKSPACE_ID);
@@ -33,12 +26,9 @@ public class Common_Steps_Utils extends PageSteps {
         BaseService.AddParams("workspace_id", Api_Info.WORKSPACE_INVALID_ID);
     }
 
-
     @Then("se valida el mensaje con: code {int}")
     public void verifyMessageCode(int code) {
         TpUtils.verifyCodeResponse(code);
     }
-
-
 
 }

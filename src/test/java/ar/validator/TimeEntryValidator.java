@@ -24,8 +24,6 @@ public class TimeEntryValidator {
 
     public static void setAddParamDeleteTimeEntry() {
         Api_TimeEntry response = (Api_TimeEntry) APIManager.getLastResponse().getResponse();
-//        BaseService.params.clear();
-//        TpUtils.setAddParamsDefault();
         BaseService.params.remove("project_id");
         BaseService.params.remove("task_id");
         BaseService.params.remove("start_time");
@@ -87,7 +85,6 @@ public class TimeEntryValidator {
         BaseService.AddParams("end_time", TpUtils.horaFin());
     }
 
-
     public static void verifyDataUpdateEntry() {
         Api_TimeEntry response = (Api_TimeEntry) APIManager.getLastResponse().getResponse();
         String descripcion = BaseService.params.get("descripcion");
@@ -95,8 +92,5 @@ public class TimeEntryValidator {
         Assert.assertEquals(response.getDescription(), descripcion,"El dato no concuerda: ");
         Assert.assertEquals(response.getId(), timeEntryId_id,"El project_id no concuerda: ");
     }
-
-
-
 
 }

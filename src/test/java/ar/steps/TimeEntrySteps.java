@@ -36,11 +36,6 @@ public class TimeEntrySteps extends PageSteps {
         TimeEntryValidator.setAddParamDeleteTimeEntry();
     }
 
-//    @And("configuro parametros para get")
-//    public void configuroParametrosParaGet() {
-//        TimeEntryValidator.setAddParamDeleteTimeEntry();
-//    }
-
     @And("verifico si existe un time entry sino creo uno")
     public void verificoSiExisteUnTimeEntrySinoCreoUno() {
         TimeEntryValidator.verifyTimeEntryExistOrCreate();
@@ -71,7 +66,5 @@ public class TimeEntrySteps extends PageSteps {
     public void ingresoDatosEnBodyYProjectIdInvalido() {
         TimeEntryValidator.invalidDataBodyNewTimeEntry();
     }
-
-
 
 }
