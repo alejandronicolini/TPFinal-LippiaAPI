@@ -1,0 +1,4 @@
+{
+  "message": "USER with id {{user_id_invalid}} doesn't belong to WORKSPACE with id {{workspace_id}}",
+  "code": 501
+}

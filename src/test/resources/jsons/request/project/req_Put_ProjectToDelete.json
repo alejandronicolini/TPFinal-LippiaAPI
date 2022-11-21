@@ -1,0 +1,20 @@
+{
+  "url": "{{base.url}}",
+  "headers": {
+    "Content-Type": "application/json",
+    "X-Api-Key": "{{api_key}}"
+  },
+  "body": {
+    "name": "{{nombre}}",
+    "clientId": "",
+    "isPublic": "false",
+    "hourlyRate": {
+      "amount": 3600
+    },
+    "color": "#f44336",
+    "note": "Se eliminar el proyecto",
+    "billable": "true",
+    "archived": "{{archivado}}"
+  },
+  "endpoint": "/workspaces/{{workspace_id}}/projects/{{project_id}}"
+}
